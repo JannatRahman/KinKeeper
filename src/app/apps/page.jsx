@@ -1,9 +1,10 @@
 import React from 'react';
 
-const AppDetailsPage = () => {
+const AppDetailsPage =async ({params}) => {
+  const {id} = await params;
   return (
     <div>
-      
+      app details page
     </div>
   );
 };

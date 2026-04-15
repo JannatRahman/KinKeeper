@@ -15,8 +15,8 @@ const YourFriends =async () => {
   return (
    <div className='bg-gray-100'>
 
-    <div className=' container mx-auto'>
-      <h2>Your Friends</h2>
+    <div className=' container mx-auto pb-20'>
+      <h2 className='text-3xl font-bold pb-10 pt-5'>Your Friends</h2>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
       {
         apps.map((app, index) => {

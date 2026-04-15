@@ -6,11 +6,17 @@ import React from 'react';
 const getStatusColor = (status) => {
   switch (status) {
     case "overdue":
-      return "bg-red-100 text-red-600";
+      return "bg-red-400 text-white";
+
     case "active":
-      return "bg-green-100 text-green-600";
-    case "pending":
-      return "bg-yellow-100 text-yellow-600";
+      return "bg-green-400 text-white";
+
+    case "On-track":
+      return "bg-green-600 text-white";
+
+    case "Almost-due":
+      return "bg-yellow-500 text-white";
+
     default:
       return "bg-gray-100 text-gray-600";
   }
@@ -34,8 +40,8 @@ const AppCards = ({app}) => {
        <div className='  text-center gap-4 space-y-4'>
        <h2 className="text-lg font-bold">{app.name}</h2>
        <p>{app.days_since_contact}d ago</p>
-       
-       <div className={`flex gap-2 ${app.tags.length === 1 ? "justify-center" : "justify-between"}`}>
+
+       <div className={`flex gap-2 ${app.tags.length === 1 ? "justify-center" : "gap-8 justify-center"}`}>
   {app.tags.map((tag, index) => (
     <span
       key={index}

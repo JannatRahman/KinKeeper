@@ -29,12 +29,22 @@ const AppCards = ({app}) => {
          alt={app.name} />
         
      </figure>
-     <div className="card-body">
+     <div className="card-body ">
        
-       <div className='  text-center gap-4'>
+       <div className='  text-center gap-4 space-y-4'>
        <h2 className="text-lg font-bold">{app.name}</h2>
-       <p>{app.days_since_contact}d  ago</p>
-       <p className='bg-green-300 p-2 rounded-2xl w-30 '>{app.tags}</p>
+       <p>{app.days_since_contact}d ago</p>
+       
+       <div className={`flex gap-2 ${app.tags.length === 1 ? "justify-center" : "justify-between"}`}>
+  {app.tags.map((tag, index) => (
+    <span
+      key={index}
+      className="bg-green-300 px-3 py-1 rounded-full text-sm"
+    >
+      {tag}
+    </span>
+  ))}
+</div>
        <p className={`px-3 py- rounded-full text-sm inline-block ${getStatusColor(app.status)}`}>{app.status}</p>
         
         

@@ -1,5 +1,6 @@
 import React from 'react';
 import AppCards from '../ui/AppCards';
+import FriendsTrack from './FriendsTrack';
 
 const appsPromise = async function () {
   const res = await fetch ("http://localhost:3000/data.json");
@@ -14,6 +15,9 @@ const YourFriends =async () => {
 
   return (
    <div className='bg-gray-100'>
+    <div>
+       <FriendsTrack apps={apps}></FriendsTrack>
+    </div>
 
     <div className=' container mx-auto pb-20'>
       <h2 className='text-3xl font-bold pb-10 pt-5'>Your Friends</h2>

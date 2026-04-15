@@ -13,7 +13,7 @@ export default function Home() {
     <div>
 
       <Banner></Banner>
-      <FriendsTrack></FriendsTrack>
+      {/* <FriendsTrack apps={apps}></FriendsTrack> */}
       <YourFriends></YourFriends>
     </div>
     

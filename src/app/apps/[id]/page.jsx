@@ -137,7 +137,7 @@ const AppDetailsPage =async ({params}) => {
   <button className='btn w-full sm:w-auto'>Edit</button>
         </div>
 
-    <ContactFriendsButton></ContactFriendsButton>
+    <ContactFriendsButton app={app}></ContactFriendsButton>
 
        </div>
 </div>

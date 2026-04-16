@@ -4,14 +4,18 @@ import React, { useContext } from 'react';
 import call from '@/assets/call.png';
 import video from '@/assets/video.png';
 import text from '@/assets/text.png'
-import ContactFriendsProvider, { ContactFriendsContext } from '@/context/ContactFriendsProvider';
+import  { ContactFriendsContext } from '@/context/ContactFriendsProvider';
 
-const ContactFriendsButton = () => {
 
-  const something = useContext(ContactFriendsContext);
-  console.log(something, "something");
+const ContactFriendsButton = ({app}) => {
+
+  const {contactFriends,setContactFriends} = useContext(ContactFriendsContext);
+  
+  console.log(contactFriends,   "something");
+
   const contactButton = () => {
-    console.log("contact friends")
+    console.log("contact friends");
+    setContactFriends([...contactFriends, app]);
   }
   return (
     <div className='bg-white p-5 rounded-lg'>

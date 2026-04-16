@@ -7,6 +7,10 @@ import { VscCopilotSnooze } from 'react-icons/vsc';
 import { IoArchiveOutline } from 'react-icons/io5';
 import { MdDeleteOutline } from 'react-icons/md';
 
+export const metadata = {
+  title: "KinKeeper |  Details",
+  
+};
 
 const getStatusColor = (status) => {
   switch (status) {
@@ -54,31 +58,32 @@ const AppDetailsPage =async ({params}) => {
 
 
   return (
-    <div className='bg-gray-100 '>
-  <div className='container mx-auto flex justify-around mt-10'>
+    <div className='bg-gray-100 min-h-screen px-4 md:px-8 '>
+  <div className='max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 mt-10'>
 
-    <div className=''>
-  <figure className='bg-white py-5 px-10 rounded-lg '>
+    <div className='w-full lg:w-1/3'>
+  <figure className='bg-white py-6 px-6 rounded-lg text-center'>
       <Image
       height={200}
       width={200}
-      className=' w-[110] rounded-full '
+      className=' mx-auto rounded-full w-28 h-28 object-cover '
       src={app.picture}
       alt={app.name} />
+      
     <div className="card-body ">
                
-    <div className='  text-center gap-4 space-y-2'>
+    <div className='  mt-4 space-y-3'>
      <h2 className="text-lg font-bold">{app.name}</h2>
         
-     <div className={`flex gap-2 ${app.tags.length === 1 ? "justify-center" : "gap-8 justify-center"}`}>
+     <div className={`flex flex-wrap justify-center gap-2 ${app.tags.length === 1 ? "justify-center" : "gap-8 justify-center"}`}>
     {app.tags.map((tag, index) => (
    <span
     key={index}
     className="bg-green-300 px-3 py-1 rounded-full text-sm">
     {tag}</span> ))}
      </div>
-     <p className={`px-3 py- rounded-full text-sm inline-block ${getStatusColor(app.status)}`}>{app.status}</p> 
-     <p>{app.bio}</p>
+     <p className={`inline-block px-3 py-1 rounded-full text-sm ${getStatusColor(app.status)}`}>{app.status}</p> 
+     <p className='text-sm text-gray-600'>{app.bio}</p>
      </div>
      <div>
       
@@ -86,19 +91,19 @@ const AppDetailsPage =async ({params}) => {
      </div>
     </figure>
 
-    <div className=' mt-5 mb-5 rounded-lg space-y-2 '>
-      <div className='flex gap-3 items-center justify-center p-3 bg-white font-semibold'>
+    <div className=' mt-5 space-y-3'>
+      <div className='flex gap-3 items-center justify-center p-3 bg-white font-semibold rounded-lg'>
         <VscCopilotSnooze /> 
         <p>Snooze 2 weeks</p>
 
       </div>
 
-      <div className='flex gap-3 items-center justify-center p-3 bg-white font-semibold'>
+      <div className='flex gap-3 items-center justify-center p-3 bg-white font-semibold rounded-lg'>
         <IoArchiveOutline />
         <p>Archive</p>
       </div>
 
-      <div className='flex gap-3 items-center justify-center p-3 bg-white font-semibold'>
+      <div className='flex gap-3 items-center justify-center p-3 bg-white font-semibold rounded-lg'>
         <MdDeleteOutline
           className='text-red-500'/>
         <p className='text-red-500'>Delete</p>
@@ -106,19 +111,19 @@ const AppDetailsPage =async ({params}) => {
     </div>
        </div>
 
-       <div>
-        <div className='flex gap-30 justify-center'>
+       <div className='w-full lg:w-2/3 space-y-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
         <div className='bg-white shadow p-5 rounded-lg text-center'>
           <p className='text-[#244d3fFF] font-bold text-lg '>{days_since_contact}</p>
           <p>Days Since Contact</p>
         </div>
 
-        <div className='bg-white shadow px-8 py-4 rounded-lg text-center'>
+        <div className='bg-white shadow p-5 rounded-lg text-center'>
     <p className='text-[#244d3fFF] font-bold text-lg'>{Goal}</p>
           <p>Goal </p>
         </div>
 
-        <div className='bg-white shadow px-5 rounded-lg text-center'>
+        <div className='bg-white shadow p-5 rounded-lg text-center'>
           <p className='text-[#244d3fFF] font-bold text-lg'>{nextDues}</p>
           <p>Next Dues</p>
         </div>
@@ -126,38 +131,41 @@ const AppDetailsPage =async ({params}) => {
         
       </div>
 
-  <div className='flex justify-between bg-white p-5 mt-5 rounded-lg'>
+  <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 rounded-lg gap-4'>
   <div className='space-y-3'>
-  <h2 className='text-[#244d3fFF] text-2xl'>Relationship Goal</h2>
+  <h2 className='text-[#244d3fFF] text-xl font-semibold'>Relationship Goal</h2>
   <p>Connect every <span className='font-bold'>30 days</span></p>
      </div>
-  <button className='btn'>Edit</button>
+  <button className='btn w-full sm:w-auto'>Edit</button>
         </div>
 
-    <div className='bg-white mt-10 mb-10 p-5 space-y-5 rounded-lg'>
-   <h3 className='text-[#244d3fFF] text-lg font-semibold pl-8'>Quick Check-in</h3>
-   <div className='flex gap-10 justify-around'>
-   <div className='bg-gray-100 px-15 py-3 space-y-3 rounded-lg items-center'>
+    <div className='bg-white p-5 rounded-lg'>
+   <h3 className='text-[#244d3fFF] text-lg font-semibold mb-5 text-center sm:text-left'>Quick Check-in</h3>
+   <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+   <div className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer'>
   <Image 
   src={call}
    alt='call'
-   width={30} />
+   width={30} 
+   className='mx-auto'/>
   <p>Call</p>
   </div>
 
-  <div className='bg-gray-100 px-15 py-3 space-y-3 rounded-lg items-center'>
+  <div className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer'>
   <Image 
   src={text}
   alt='text'
-  width={30} />
+  width={30} 
+  className='mx-auto'/>
    <p>Text</p>
   </div>
 
- <div className='bg-gray-100 px-15 py-3 space-y-3 rounded-lg items-center'>
+ <div className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer'>
    <Image 
    src={video}
    alt='Video'
-   width={30} />
+   width={30} 
+   className='mx-auto'/>
   <p>Video</p>
    </div>
   </div>

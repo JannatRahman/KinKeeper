@@ -9,7 +9,8 @@
     "tags": ["college", "close friend"],
     "bio": "Met in university. Love hiking together.",
     "goal": 14,
-    "next_due_date": "2025-07-20"
+    "next_due_date": "2025-07-20",
+     "date": "January 1/11/2026"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "tags": ["work", "team"],
     "bio": "Colleague from marketing team.",
     "goal": 10,
-    "next_due_date": "2025-07-25"
+    "next_due_date": "2025-07-25",
+     "date": "February 2/22/2026"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "tags": ["gym", "friend"],
     "bio": "Workout partner at the gym.",
     "goal": 15,
-    "next_due_date": "2025-07-18"
+    "next_due_date": "2025-07-18",
+     "date": "March 3/14/2026"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "tags": ["family"],
     "bio": "Cousin living in another city.",
     "goal": 7,
-    "next_due_date": "2025-07-28"
+    "next_due_date": "2025-07-28",
+     "date": "April 4/17/2026"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "tags": ["business"],
     "bio": "Client from freelancing project.",
     "goal": 20,
-    "next_due_date": "2025-07-15"
+    "next_due_date": "2025-07-15",
+     "date": "May 5/29/2026"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "tags": ["school", "friend"],
     "bio": "School friend, loves art.",
     "goal": 12,
-    "next_due_date": "2025-07-26"
+    "next_due_date": "2025-07-26",
+     "date": "June 6/30/2026"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "tags": ["travel"],
     "bio": "Met during a trip abroad.",
     "goal": 14,
-    "next_due_date": "2025-07-19"
+    "next_due_date": "2025-07-19",
+     "date": "July 7/25/2026"
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "tags": ["neighbor"],
     "bio": "Lives next door, very helpful.",
     "goal": 5,
-    "next_due_date": "2025-07-30"
+    "next_due_date": "2025-07-30",
+     "date": "August 8/18/2026"
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "tags": ["project", "team"],
     "bio": "Worked together on a startup idea.",
     "goal": 21,
-    "next_due_date": "2025-07-16"
+    "next_due_date": "2025-07-16",
+     "date": "September 9/19/2026"
   },
   {
     "id": 10,
@@ -117,6 +126,7 @@
     "tags": ["friend"],
     "bio": "Childhood friend, stays in touch regularly.",
     "goal": 10,
-    "next_due_date": "2025-07-27"
+    "next_due_date": "2025-07-27",
+    "date": "October 10/10/2026"
   }
 ]

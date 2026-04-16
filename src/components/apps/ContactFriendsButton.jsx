@@ -5,9 +5,12 @@ import call from '@/assets/call.png';
 import video from '@/assets/video.png';
 import text from '@/assets/text.png'
 import  { ContactFriendsContext } from '@/context/ContactFriendsProvider';
+import { toast } from 'react-toastify';
+
 
 
 const ContactFriendsButton = ({app}) => {
+
 
   const {contactFriends,setContactFriends} = useContext(ContactFriendsContext);
   
@@ -16,6 +19,7 @@ const ContactFriendsButton = ({app}) => {
   const contactButton = () => {
     console.log("contact friends");
     setContactFriends([...contactFriends, app]);
+    toast.success(`Text with${app.name}`)
   }
   return (
     <div className='bg-white p-5 rounded-lg'>

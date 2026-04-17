@@ -32,7 +32,7 @@ const getStatusColor = (status) => {
 
 const appsPromise = async function () {
 
-  const res = await fetch ("http://localhost:3000/data.json");
+  const res = await fetch ("https://kin-keeper-rosy.vercel.app/data.json",{cache:"no-store"});
   const data = await res.json();
   return data
 };

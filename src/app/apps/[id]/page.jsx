@@ -122,7 +122,7 @@ const AppDetailsPage =async ({params}) => {
         </div>
 
         <div className='bg-white shadow p-5 rounded-lg text-center'>
-          <p className='text-[#244d3fFF] font-bold text-lg'>{nextDues}</p>
+          <p className='text-[#244d3fFF] font-bold text-lg'>{nextDues} Days</p>
           <p>Next Dues</p>
         </div>
 

@@ -1,10 +1,13 @@
-import React from 'react';
+
+import React, { useContext } from 'react';
 import { FaHome } from 'react-icons/fa';
 import { RiTimeLine } from 'react-icons/ri';
 import { TfiStatsUp } from 'react-icons/tfi';
 import MyLink from './MyLink';
+import { ContactFriendsContext } from '@/context/ContactFriendsProvider';
 
 const Navbar = () => {
+
   
   return (
     <div className='shadow'>
@@ -14,9 +17,8 @@ const Navbar = () => {
         <h2 className='font-semibold text-green-950 text-2xl'><span className=' font-bold '>Keen</span>Keeper</h2>
       </div>
 
-      <ul>
-         
-       </ul>
+{/*  Search Input */}
+      
 
       <div className='flex gap-5 items-center text-[#244d3fFF] cursor-pointer'>
        <div className='flex gap-2 items-center '>
@@ -27,12 +29,12 @@ const Navbar = () => {
 
        
 
-        <div className='flex gap-2 items-center text-green-800 cursor-pointer'>
+        <div className='flex gap-2 items-center text-[#244d3fFF] cursor-pointer'>
           <RiTimeLine />
          <MyLink href={"/timeline"}>Timeline</MyLink>
         </div>
 
-        <div className='flex gap-2 items-center text-green-800 cursor-pointer'>
+        <div className='flex gap-2 items-center text-[#244d3fFF] cursor-pointer'>
           <TfiStatsUp />
           <MyLink href={"/stats"}>Stats</MyLink>
         </div>

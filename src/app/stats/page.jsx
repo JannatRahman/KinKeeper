@@ -9,24 +9,43 @@ import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 // };
 
 const Stats = () => {
- 
   const {contactFriends} = useContext(ContactFriendsContext);
 
-  const data = [
-  { name: 'Call', value: contactFriends.length, fill: '#0088FE' },
-  { name: 'Text', value: contactFriends.length, fill: '#00C49F' },
-  { name: 'Video', value: contactFriends.length, fill: '#FFBB28' },
  
+
+   // ✅ YOUR ORIGINAL LOGIC (kept)
+  const callCount = contactFriends.filter(i => i.type === 'call').length;
+  const textCount = contactFriends.filter(i => i.type === 'text').length;
+  const videoCount = contactFriends.filter(i => i.type === 'video').length;
+ 
+
+  const data = [
+  { name: 'Call', value: callCount, fill: '#0088FE' },
+  { name: 'Text', value: textCount, fill: '#00C49F' },
+  { name: 'Video', value: videoCount, fill: '#FFBB28' },
 ];
 
 
   return (
-    <div className='bg-gray-100'>
-    <div className='container mx-auto '>
-  <h2 className='text-5xl font-bold py-15 '>Friendship Analytics</h2>
-    <div className='mx-auto flex justify-center bg-white p-5 rounded-lg mb-10'>
+    <div className='bg-gray-100 min-h-screen py-6 sm:py-10'>
+    <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
 
-   <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
+       {/* Heading */}
+  <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold py-6 sm:py-10 text-center sm:text-left '>Friendship Analytics</h2>
+
+  {/* Card */}
+    <div className='flex flex-col lg:flex-row items-center justify-center bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-md gap-6'>
+
+      <h2 className='text-lg sm:text-xl md:text-2xl font-bold text-[#244d3fFF] text-center lg:text-left'>By Interaction Type</h2>
+
+      
+
+    <div className='w-full flex justify-center'>
+
+   <PieChart style={{ 
+    width: '100%',
+    maxWidth: '500px',
+    maxHeight: '80vh', aspectRatio: 1 }} responsive>
       <Pie
         data={data}
         innerRadius="80%"
@@ -43,6 +62,8 @@ const Stats = () => {
       <Legend></Legend>
       <Tooltip></Tooltip>
     </PieChart>
+    </div>
+
     </div>
       </div>
     </div>

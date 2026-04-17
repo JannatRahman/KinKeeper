@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📱 KeenKeeper
 
-## Getting Started
+## 📝 Project Description
+KeenKeeper is a modern **Next.js web application** designed to manage contacts and track user interaction activities such as text messages, calls, and video calls.  
+It provides a clean timeline-based UI where all activities are displayed dynamically using React Context API for efficient state management.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Technologies Used
+- Next.js (App Router)
+- React.js
+- Context API
+- Tailwind CSS
+- JavaScript (ES6+)
+- Next/Image Optimization
+- React Toastify
+- React Spinner
+- React icons
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
+---
+---
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### 📇 1. Contact Management
+Easily add, store, and manage contacts using a global state system powered by Context API.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ⏱️ 2. Activity Timeline
+Displays user interactions (📞 calls, 💬 texts, 🎥 video calls) in a structured and dynamic timeline format.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📊 Live Stats Overview
+This project includes a dynamic stats section that reflects user activity in real time:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 👥 Total Contacts
+- 💬 Total Messages Sent
+- 📞 Total Calls Made
+- 🎥 Total Video Calls
+- ⚡ Active Interactions
+
+
+### 📱 3. Responsive Design
+Fully responsive UI optimized for all devices including mobile, tablet, and desktop using Tailwind CSS.
+
+---
+
+## 🎯 Project Goal
+The goal of this project is to create a smooth and interactive contact tracking system with real-time UI updates and clean user experience.
+
+---

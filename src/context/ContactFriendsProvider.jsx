@@ -7,13 +7,16 @@ const ContactFriendsProvider = ({children}) => {
   
   const [contactFriends, setContactFriends] = useState([]);
 
+ 
+
   const data = {
     contactFriends,
     setContactFriends,
   };
 
   return (
-    <ContactFriendsContext.Provider value={data}>
+    <ContactFriendsContext.Provider value={
+      data}>
       {children}
     </ContactFriendsContext.Provider>
   );

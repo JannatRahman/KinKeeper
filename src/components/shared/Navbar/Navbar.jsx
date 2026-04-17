@@ -5,22 +5,7 @@ import { TfiStatsUp } from 'react-icons/tfi';
 import MyLink from './MyLink';
 
 const Navbar = () => {
-  // const navItems = [
-  //   {
-  //     path: "/",
-  //     text: "Home"
-  //   },
-  //   {
-  //     path: "/timeline",
-  //     text: "Timeline"
-  //   },
-  //   {
-  //     path: "/stats",
-  //     text: "Stats"
-  //   },
-    
-    
-  // ]
+  
   return (
     <div className='shadow'>
 
@@ -30,11 +15,7 @@ const Navbar = () => {
       </div>
 
       <ul>
-          {/* {
-      navItems.map((item, index) =>  
-      // client component
-      <MyLink key={index} href={item.path}>{item.text}</MyLink>)
-    } */}
+         
        </ul>
 
       <div className='flex gap-5 items-center text-[#244d3fFF] cursor-pointer'>

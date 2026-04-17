@@ -14,36 +14,41 @@ const ContactFriendsButton = ({app}) => {
 
   const {contactFriends,setContactFriends} = useContext(ContactFriendsContext);
   
-  console.log(contactFriends,   "something");
+  
+  const contactButton = (type) => {
+  const newContact = {
+    name: app.name,
+    type: type,
+    date: new Date().toLocaleString(),
+  };
 
-  const contactButton = () => {
-    console.log("contact friends");
-    setContactFriends([...contactFriends, app]);
-    toast.success(`Text with${app.name}`)
-  }
+  setContactFriends((prev) => [...prev, newContact]);
+
+  toast.success(`${type} with ${app.name}`);
+};
   return (
     <div className='bg-white p-5 rounded-lg'>
        <h3 className='text-[#244d3fFF] text-lg font-semibold mb-5 text-center sm:text-left'>Quick Check-in</h3>
        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
-       <button className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer' onClick={contactButton}>
+       <button className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer' onClick={() => contactButton("call")}>
       <Image 
       src={call}
-       alt='call'
+       alt='Call'
        width={30} 
        className='mx-auto'/>
       <p>Call</p>
       </button >
     
-      <button  className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer' onClick={contactButton}>
+      <button  className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer' onClick={() => contactButton("text")}>
       <Image 
       src={text}
-      alt='text'
+      alt='Text'
       width={30} 
       className='mx-auto'/>
        <p>Text</p>
       </button >
     
-     <button  className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer' onClick={contactButton}>
+     <button  className='bg-gray-100 py-4 rounded-lg text-center space-y-2 cursor-pointer' onClick={() => contactButton("video")}>
        <Image 
        src={video}
        alt='Video'

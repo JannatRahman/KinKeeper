@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 
 
 export default function NoActivityPage() {
@@ -22,9 +24,11 @@ export default function NoActivityPage() {
           everything will appear here.
         </p>
 
-        <button className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition">
+        <Link href={"/"}>
+        <button  className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full transition cursor-pointer" >
           Get Started
         </button>
+        </Link>
 
       </div>
     </div>

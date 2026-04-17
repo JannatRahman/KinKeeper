@@ -1,5 +1,6 @@
 'use client'
-import React from 'react';
+import { ContactFriendsContext } from '@/context/ContactFriendsProvider';
+import React, { useContext } from 'react';
 import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 
 // export const metadata = {
@@ -8,10 +9,13 @@ import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 // };
 
 const Stats = () => {
+ 
+  const {contactFriends} = useContext(ContactFriendsContext);
+
   const data = [
-  { name: 'Call', value: 400, fill: '#0088FE' },
-  { name: 'Text', value: 300, fill: '#00C49F' },
-  { name: 'Video', value: 300, fill: '#FFBB28' },
+  { name: 'Call', value: contactFriends.length, fill: '#0088FE' },
+  { name: 'Text', value: contactFriends.length, fill: '#00C49F' },
+  { name: 'Video', value: contactFriends.length, fill: '#FFBB28' },
  
 ];
 

@@ -12,28 +12,28 @@ const FriendsTrack = ({apps}) => {
   const interactionsThisMonth = apps.filter(app => app.days_since_contact <= 30).length;
 
   return (
-    <div className='bg-gray-100 py-5'>
+    <div className='bg-gray-100 py-6'>
 
-    <div className=' container mx-auto'>
-      <div className='flex gap-20 justify-center'>
-        <div className='bg-white shadow px-5 rounded-lg text-center'>
-          <p className='text-[#244d3fFF] font-bold text-lg'>{totalFriends}</p>
-          <p>Total Friends</p>
+    <div className=' container mx-auto px-4'>
+      <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6'>
+        <div className='bg-white shadow-md rounded-xl text-center py-4 sm:py-5'>
+          <p className='text-[#244d3f] font-bold text-lg sm:text-xl md:text-2xl'>{totalFriends}</p>
+          <p className='text-sm sm:text-base text-gray-600'>Total Friends</p>
         </div>
 
-        <div className='bg-white shadow px-5 rounded-lg text-center'>
-          <p className='text-[#244d3fFF] font-bold text-lg'>{onTrack}</p>
+        <div className='bg-white shadow-md rounded-xl text-center py-4 sm:py-5'>
+          <p className='text-[#244d3f] font-bold text-lg sm:text-xl md:text-2xl'>{onTrack}</p>
           <p>On Track</p>
         </div>
 
-        <div className='bg-white shadow px-5 rounded-lg text-center'>
-          <p className='text-[#244d3fFF] font-bold text-lg'>{needAttention}</p>
+        <div className='bg-white shadow-md rounded-xl text-center py-4 sm:py-5'>
+          <p className='text-[#244d3f] font-bold text-lg sm:text-xl md:text-2xl'>{needAttention}</p>
           <p>Need Attention</p>
         </div>
 
-        <div className='bg-white shadow  px-3 py-2 rounded-lg text-center'>
-          <p className='text-[#244d3fFF] font-bold text-lg'>{interactionsThisMonth}</p>
-          <p>Interactions This Month</p>
+        <div className='bg-white shadow-md rounded-xl text-center py-4 sm:py-5 px-2'>
+          <p className='text-[#244d3f] font-bold text-lg sm:text-xl md:text-2xl'>{interactionsThisMonth}</p>
+          <p className='text-xs sm:text-sm md:text-base text-gray-600'>Interactions This Month</p>
         </div>
       </div>
     </div>
